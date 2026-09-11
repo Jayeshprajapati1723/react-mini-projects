@@ -1,15 +1,13 @@
 import { useState } from "react";
 
 function App() {
-
-  
   // itna sb krne ki jarurat nhi h bs ye kro ki hook states use kro
   // jeese useState ye do chiz return krta h ek array me
-let  [ct, updatect] = useState(1);
+  let [ct, updatect] = useState(1);
   // USE STATE ME JO PASS KRENGE VO COUNT ME A JAYEGA OR WHI SE INTIT hoga
   // or ek function pass krdo jisse hm update kr ske
   function incct() {
-    updatect(ct+1);
+    updatect(ct + 1);
   }
   function inccttt() {
     ct++;
@@ -28,6 +26,25 @@ let  [ct, updatect] = useState(1);
       <button onClick={incct}>increase</button>
     </>
   );
-
 }
-export default App ;
+export default App;
+
+function Gitshow() {
+  // abhi array khali h isliye intiaize kliye empty array bheja h
+  const [users, setUser] = useState([]);
+  async function Datalao() {
+    let response = await fetch("https://api.github.com/users");
+   let data  = response.json() ;
+    console.log(data);
+    setUser(data);
+  }
+
+  return (
+    <>
+      {users.map((user) => (
+        <img src={avatar_url} height={100} width={100}></img>
+      ))}
+    </>
+  );
+}
+export { Gitshow };
