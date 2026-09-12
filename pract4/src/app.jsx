@@ -41,6 +41,7 @@ function Gitshow() {
 
   return (
     <>
+    <button onClick={Datalao} >Display</button>
       {users.map((user) => (
         <img src={avatar_url} height={100} width={100}></img>
       ))}
