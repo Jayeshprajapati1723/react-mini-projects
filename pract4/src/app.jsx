@@ -33,8 +33,9 @@ function Gitshow() {
   // abhi array khali h isliye intiaize kliye empty array bheja h
   const [users, setUser] = useState([]);
   async function Datalao() {
+    // console.log(data);
     let response = await fetch("https://api.github.com/users");
-   let data  = response.json() ;
+   let data  = await response.json() ;
     console.log(data);
     setUser(data);
   }
@@ -43,9 +44,8 @@ function Gitshow() {
     <>
     <button onClick={Datalao} >Display</button>
       {users.map((user) => (
-        <img src={avatar_url} height={100} width={100}></img>
+        <img src={user.avatar_url} height={100} width={100}></img>
       ))}
     </>
   );
-}
-export { Gitshow };
+}export { Gitshow };
