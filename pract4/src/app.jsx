@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <h1>counter:{ct}</h1>
+      {/* <h1>counter:{ct}</h1> */}
       <button onClick={incct}>increase</button>
     </>
   );
@@ -44,7 +44,9 @@ function Gitshow() {
     <>
     <button onClick={Datalao} >Display</button>
       {users.map((user) => (
-        <img src={user.avatar_url} height={100} width={100}></img>
+      <>
+            <img src={user.avatar_url} height={100} width={100}></img></>
+      
       ))}
     </>
   );
