@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   // itna sb krne ki jarurat nhi h bs ye kro ki hook states use kro
@@ -32,22 +32,28 @@ export default App;
 function Gitshow() {
   // abhi array khali h isliye intiaize kliye empty array bheja h
   const [users, setUser] = useState([]);
-  async function Datalao() {
-    // console.log(data);
-    let response = await fetch("https://api.github.com/users");
-   let data  = await response.json() ;
-    console.log(data);
-    setUser(data);
-  }
+
+  useEffect(() => {
+    async function Datalao() {
+      // console.log(data);
+      let response = await fetch("https://api.github.com/users");
+      let data = await response.json();
+      console.log(data);
+      setUser(data);
+    }
+    Datalao();
+  }, []);
 
   return (
     <>
-    <button onClick={Datalao} >Display</button>
+    <h1>github user using useffect</h1>
       {users.map((user) => (
-      <>
-            <img src={user.avatar_url} height={100} width={100}></img></>
-      
+        <>
+          <img src={user.avatar_url} height={100} width={100} margin={5}></img>
+        </>
       ))}
     </>
   );
-}export { Gitshow };
+}
+
+export { Gitshow };
