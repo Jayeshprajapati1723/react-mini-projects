@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-function App() {
+
+function APP() {
+
+}
+
+
+function Apps() {
   // itna sb krne ki jarurat nhi h bs ye kro ki hook states use kro
   // jeese useState ye do chiz return krta h ek array me
   let [ctt, updatect] = useState(1);
@@ -27,7 +33,7 @@ function App() {
     </>
   );
 }
-export default App;
+export default Apps;
 
 function Gitshow() {
   // abhi array khali h isliye intiaize kliye empty array bheja h
