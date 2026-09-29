@@ -3,6 +3,8 @@ import  Apps  from './app.jsx'
 import  Clock from './clock.jsx';
 import {createRoot} from "react-dom/client" ;
 render(<Apps />, document.getElementById('app'));
+import Counter from './counter.jsx'
+;
 
 
 import { Gitshow } from './app.jsx';
@@ -16,8 +18,12 @@ function App () {
     return (
 <>
 {/* <Gitshow/> */}
-<Clock/>
+{/* <Clock/> */}
+<div>
+    <Counter/>
+</div>
 </>
     )
 }
 export {App} ;
+

@@ -6,16 +6,22 @@ function Clock() {
 
   const [time, setTime] = useState(new Date().toLocaleTimeString());
   function setShows() {
-    if (show == "show") {
-      console.log(show) ;
-      setShow("hide");
-    } else {
-      setShow("show");
-    console.log(show) ;
-    }
+    // if (show == "show") {
+    //   console.log(show) ;
+    //   setShow("hide");
+    // } else {
+    //   setShow("show");
+    // console.log(show) ;
+    // }
+  const  set = show=="show"?"hide":"show";
+    setShow(set) ;
   }
 
   useEffect(() => {
+if(show=="hide") {
+  return ;
+}
+
     const interval = setInterval(() => {
       setTime(new Date().toLocaleTimeString());
     console.log("hi") ;
