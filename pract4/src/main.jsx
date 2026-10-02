@@ -2,7 +2,7 @@ import { render } from 'react-dom';
 import  Apps  from './app.jsx'
 import  Clock from './clock.jsx';
 import {createRoot} from "react-dom/client" ;
-render(<Apps />, document.getElementById('app'));
+// render(<Apps />, document.getElementById('app'));
 import Counter from './counter.jsx'
 ;
 
@@ -14,16 +14,21 @@ const roote = createRoot(rootele) ;
 // roote.render(<Gitshow />);
 // roote.render(< Clock/>);
 roote.render(<App/>) ;
+import { List } from './list.jsx';
 function App () {
     return (
 <>
-{/* <Gitshow/> */}
-{/* <Clock/> */}
 <div>
-    <Counter/>
+    <List/>
 </div>
 </>
     )
 }
 export {App} ;
 
+// 
+
+
+
+
+// 
