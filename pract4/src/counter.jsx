@@ -2,7 +2,7 @@ import { useState } from "react";
 import { List } from "./list";
 export default Counter;
 // foods - props h
-function Counter({foods}) {
+function Counter({foods,stud}) {
   const [count, setCount] = useState(0);
 
   return (
@@ -16,11 +16,12 @@ function Counter({foods}) {
 
       <div>
         <ol>
-          { foods.map((items,indx) => (
-<li key={indx}>{items} </li>
+          { foods.map((items) => (
+<li key={items}>{items} </li>
            )
 )}
         </ol>
+        <li>{stud} </li>
       </div>
     </>
   );

@@ -17,7 +17,7 @@ function List() {
             <li>{list} </li>
           ))}
         </ol>
-        <Counter foods={li}/>
+        <Counter foods={li} stud={"jayesh ji"}  />
       </div>
       <div>
         <button onClick={addfood}> INC FOOD</button>
