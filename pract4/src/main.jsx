@@ -1,4 +1,6 @@
-
+// usecontext hook ko import kro 
+// than use implement kro 
+import { useContext } from 'react';
 import { render } from 'react-dom';
 import  Apps  from './app.jsx'
 // import  Clock from './clock.jsx';
@@ -18,9 +20,14 @@ const roote = createRoot(rootele) ;
 // roote.render(< Clock/>);
 roote.render(<App/>) ;
 import { List } from './list.jsx';
+
+
+const ctcontext = Ctcontext() ;
+export {Ctcontext};
 function App () {
     return (
 <>
+<><Ctcontext>
 <div>
     {/* <Clock/> */}
 {/* <Ct/> */}
@@ -30,6 +37,7 @@ function App () {
 </div>
 <DetailFORM></DetailFORM>
 </div>
+</Ctcontext></>
 </>
     )
 }
