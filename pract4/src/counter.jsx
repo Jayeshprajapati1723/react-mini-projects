@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { List } from "./list";
 export default Counter;
+import {Sum} from "./usememo.jsx" ;
 // foods - props h
 function Counter({foods,stud}) {
   const [count, setCount] = useState(0);
